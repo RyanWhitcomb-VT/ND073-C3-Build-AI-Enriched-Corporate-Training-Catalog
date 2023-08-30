@@ -1,0 +1,340 @@
+# Query 1
+*&$filter=rating_average gt 4 and rating_count gt 20&$top=5
+
+{
+  "@odata.context": "https://rtw-cogsearch-16.search.windows.net/indexes('azuretable-index')/$metadata#docs(*)",
+  "value": [
+    {
+      "@search.score": 1,
+      "Key": "198ec554-7709-46a1-bb29-c08b40c7266500373a17-4708-4812-9c38-9e80dd714346",
+      "description": "Get started with AI on Azure",
+      "url": "https://docs.microsoft.com/en-us/learn/modules/get-started-ai-fundamentals/?WT.mc_id=api_CatalogApi",
+      "people": [],
+      "organizations": [],
+      "locations": [],
+      "keyphrases": []
+    },
+    {
+      "@search.score": 1,
+      "Key": "198ec554-7709-46a1-bb29-c08b40c72665005db7a7-7624-44ad-94a7-9e949a9b8b1f",
+      "description": "This self-paced module helps you build an AI model from the beginning and shows how you can use it in your business without writing a single line of code.",
+      "url": "https://docs.microsoft.com/en-us/learn/modules/get-started-with-ai-builder/?WT.mc_id=api_CatalogApi",
+      "people": [],
+      "organizations": [],
+      "locations": [],
+      "keyphrases": []
+    },
+    {
+      "@search.score": 1,
+      "Key": "198ec554-7709-46a1-bb29-c08b40c72665007386be-118b-4ac4-af93-289088b2bee0",
+      "description": "Use the Computer Vision API to analyze images for insights, extract text from images, and generate high-quality thumbnails.",
+      "url": "https://docs.microsoft.com/en-us/learn/modules/create-computer-vision-service-to-classify-images/?WT.mc_id=api_CatalogApi",
+      "people": [],
+      "organizations": [],
+      "locations": [],
+      "keyphrases": []
+    },
+    {
+      "@search.score": 1,
+      "Key": "198ec554-7709-46a1-bb29-c08b40c7266500a69b75-f303-49a8-86d8-d07b01bcc39c",
+      "description": "Learn to create a successful open-source program by establishing contributor guidance, following proven processes, and leveraging community standards.",
+      "url": "https://docs.microsoft.com/en-us/learn/modules/create-open-source-program-github/?WT.mc_id=api_CatalogApi",
+      "people": [],
+      "organizations": [],
+      "locations": [],
+      "keyphrases": []
+    },
+    {
+      "@search.score": 1,
+      "Key": "198ec554-7709-46a1-bb29-c08b40c7266500b5c260-0b79-4c68-941b-88ad532c39d2",
+      "description": "Explore two capabilities in the DevOps taxonomy, Continuous Collaboration and Continuous Improvement.",
+      "url": "https://docs.microsoft.com/en-us/learn/modules/characterize-devops-continous-collaboration-improvement/?WT.mc_id=api_CatalogApi",
+      "people": [],
+      "organizations": [],
+      "locations": [],
+      "keyphrases": []
+    }
+  ]
+}
+
+# Query 2
+*&$select=title&$filter=level eq 'beginner'
+
+{
+  "@odata.context": "https://rtw-cogsearch-17.search.windows.net/indexes('courses-index')/$metadata#docs(*)",
+  "value": [
+    {
+      "@search.score": 1,
+      "title": "Introduction to GitHub in Visual Studio Code"
+    },
+    {
+      "@search.score": 1,
+      "title": "Automate machine learning model selection with Azure Machine Learning"
+    },
+    {
+      "@search.score": 1,
+      "title": "Create a language translator application with Unity and Azure Cognitive Services"
+    },
+    {
+      "@search.score": 1,
+      "title": "Introduction to AI technology"
+    },
+    {
+      "@search.score": 1,
+      "title": "Use AI to recognize objects in images by using the Custom Vision service"
+    },
+    {
+      "@search.score": 1,
+      "title": "Migrate your repository by using GitHub best practices"
+    },
+    {
+      "@search.score": 1,
+      "title": "Get started with AI Builder Object detection"
+    },
+    {
+      "@search.score": 1,
+      "title": "Create and manage Cognitive Services"
+    },
+    {
+      "@search.score": 1,
+      "title": "Work with Data in Azure Machine Learning"
+    },
+    {
+      "@search.score": 1,
+      "title": "Manage software delivery by using a release based workflow on GitHub"
+    }
+  ]
+}
+
+# Query 3
+*&$select=title,rating_average,instructor,role&facets=["role"]&$filter=instructor ne null
+
+{
+  "@odata.context": "https://rtw-cogsearch-17.search.windows.net/indexes('courses-index')/$metadata#docs(*)",
+  "@search.facets": {
+    "role": [
+      {
+        "count": 5,
+        "value": "devops-engineer"
+      },
+      {
+        "count": 3,
+        "value": "business-user"
+      },
+      {
+        "count": 3,
+        "value": "developer"
+      },
+      {
+        "count": 2,
+        "value": "administrator"
+      },
+      {
+        "count": 2,
+        "value": "data-scientist"
+      },
+      {
+        "count": 2,
+        "value": "solution-architect"
+      },
+      {
+        "count": 1,
+        "value": "ai-edge-engineer"
+      },
+      {
+        "count": 1,
+        "value": "functional-consultant"
+      },
+      {
+        "count": 1,
+        "value": "student"
+      }
+    ]
+  },
+  "value": [
+    {
+      "@search.score": 1,
+      "instructor": "na",
+      "rating_average": 4.77,
+      "role": "business-user",
+      "title": "Identify governing practices for responsible AI"
+    },
+    {
+      "@search.score": 1,
+      "instructor": "na",
+      "rating_average": 4.65,
+      "role": "student",
+      "title": "Process images with the Computer Vision service"
+    },
+    {
+      "@search.score": 1,
+      "instructor": "na",
+      "rating_average": 4.78,
+      "role": "administrator",
+      "title": "Manage software delivery by using a release based workflow on GitHub"
+    },
+    {
+      "@search.score": 1,
+      "instructor": "na",
+      "rating_average": 4.78,
+      "role": "data-scientist",
+      "title": "Get started with AI on Azure"
+    },
+    {
+      "@search.score": 1,
+      "instructor": "na",
+      "rating_average": 5,
+      "role": "developer",
+      "title": "Get started with Git and GitHub in Visual Studio"
+    },
+    {
+      "@search.score": 1,
+      "instructor": "na",
+      "rating_average": 4.71,
+      "role": "devops-engineer",
+      "title": "Build continuous integration (CI) workflows by using GitHub Actions"
+    },
+    {
+      "@search.score": 1,
+      "instructor": "na",
+      "rating_average": 4.7,
+      "role": "solution-architect",
+      "title": "Automate multi-container Kubernetes deployments with Azure Pipelines"
+    },
+    {
+      "@search.score": 1,
+      "instructor": "na",
+      "rating_average": 4.71,
+      "role": "data-scientist",
+      "title": "Deploy batch inference pipelines with Azure Machine Learning"
+    },
+    {
+      "@search.score": 1,
+      "instructor": "na",
+      "rating_average": 4.83,
+      "role": "devops-engineer",
+      "title": "Settle competing commits by using merge conflict resolution on GitHub"
+    },
+    {
+      "@search.score": 1,
+      "instructor": "na",
+      "rating_average": 4.88,
+      "role": "devops-engineer",
+      "title": "Contribute to an open-source project on GitHub"
+    },
+    {
+      "@search.score": 1,
+      "instructor": "na",
+      "rating_average": 4.71,
+      "role": "functional-consultant",
+      "title": "Identify guiding principles for responsible AI"
+    },
+    {
+      "@search.score": 1,
+      "instructor": "na",
+      "rating_average": 4.58,
+      "role": "developer",
+      "title": "Rapidly develop and deploy Java apps using GitHub Actions or Azure Pipelines"
+    },
+    {
+      "@search.score": 1,
+      "instructor": "na",
+      "rating_average": 4.82,
+      "role": "business-user",
+      "title": "Discover Microsoft guidelines for responsible conversational AI development"
+    },
+    {
+      "@search.score": 1,
+      "instructor": "na",
+      "rating_average": 4.71,
+      "role": "devops-engineer",
+      "title": "Run nonfunctional tests in Azure Pipelines"
+    },
+    {
+      "@search.score": 1,
+      "instructor": "na",
+      "rating_average": 4.72,
+      "role": "solution-architect",
+      "title": "Host your own build agent in Azure Pipelines"
+    },
+    {
+      "@search.score": 1,
+      "instructor": "na",
+      "rating_average": 4.75,
+      "role": "business-user",
+      "title": "Enable business users with key AI use cases"
+    },
+    {
+      "@search.score": 1,
+      "instructor": "na",
+      "rating_average": 4.88,
+      "role": "ai-edge-engineer",
+      "title": "Contribute to an open-source project on GitHub"
+    },
+    {
+      "@search.score": 1,
+      "instructor": "na",
+      "rating_average": 4.75,
+      "role": "developer",
+      "title": "Create a multistage pipeline by using Azure Pipelines"
+    },
+    {
+      "@search.score": 1,
+      "instructor": "na",
+      "rating_average": 4.77,
+      "role": "administrator",
+      "title": "Introduction to GitHub's Products"
+    },
+    {
+      "@search.score": 1,
+      "instructor": "na",
+      "rating_average": 4.79,
+      "role": "devops-engineer",
+      "title": "Search and organize repository history by using GitHub"
+    }
+  ]
+}
+
+# Query 4
+*&$select=title,rating_average,instructor,role,level&facetrole&$filter=instructor ne 'na'&$orderby=rating_average
+
+{
+  "@odata.context": "https://rtw-cogsearch-17.search.windows.net/indexes('courses-index')/$metadata#docs(*)",
+  "value": []
+}
+
+# Query 5
+"machine learning"&facets=["source"]&$top=5
+
+{
+  "@odata.context": "https://rtw-cogsearch-17.search.windows.net/indexes('courses-index')/$metadata#docs(*)",
+  "@search.facets": {
+    "source": [
+      {
+        "count": 1,
+        "value": "MS Learn"
+      }
+    ]
+  },
+  "value": [
+    {
+      "@search.score": 5.6885285,
+      "Key": "03d34f13-3639-4054-997e-38b373ca1f6d020642b9-e27a-4865-97e1-6f0dc52f4956",
+      "description": "Deploy batch inference pipelines with Azure Machine Learning",
+      "duration": 44,
+      "instructor": "na",
+      "level": "intermediate",
+      "product": "azure",
+      "rating_average": 4.71,
+      "rating_count": 572,
+      "role": "data-scientist",
+      "source": "MS Learn",
+      "title": "Deploy batch inference pipelines with Azure Machine Learning",
+      "url": "https://docs.microsoft.com/en-us/learn/modules/deploy-batch-inference-pipelines-with-azure-machine-learning/?WT.mc_id=api_CatalogApi",
+      "people": [],
+      "organizations": [],
+      "locations": [],
+      "keyphrases": []
+    }
+  ]
+}
