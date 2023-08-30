@@ -1,0 +1,25 @@
+Requirements for Course Search Solution:
+•	User should be able to search Course Data by keywords and phrases from all text fields (except url, partionKey and rowKey)
+•	Users should be able to see all relevant fields in search results. All fields are returned and front-end will is assumed to filter what to be displayed to final user.
+•	Users should be able to filter, sort and facet on duration
+•	Users should be able to filter, and facet on instructor
+•	Users should be able to filter and facet on level
+•	Users should be able to filter and facet on product
+•	Users should be able to filter, sort and facet on rating-average
+•	Users should be able to filter and sort on rating-count
+•	Users should be able to filter and facet on role
+•	Users should be able to filter and facet on source
+•	Users should be able to filter and facet on extracted keyphrases
+•	User should be able to see the enriched profile for each of the course instructors
+
+
+Requirements for Paper Search Solution:
+•	User should be able to search Paper Data by keywords and phrases from all text fields (except metadata storage).
+•	Users should be able to see all relevant fields in search results. All fields are returned and front-end will is assumed to filter what to be displayed to final user.
+•	Users should be able to filter and facet on author
+•	Users should be able to filter and sort on title
+•	Users should be able to filter, sort and facet on creation_date
+•	Users should be able to filter and facet on extracted people
+•	Users should be able to filter and facet on extracted organizations
+•	Users should be able to filter and facet on extracted keyphrases
+•	Users should be provided the DOI (Digital Object Identifier) URL for the file as part of the search result.
